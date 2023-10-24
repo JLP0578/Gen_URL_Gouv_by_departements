@@ -1,0 +1,1 @@
+PATH_BUILD = r"C:\Users\Grievous-PC-10\Desktop\GAP\Python\Build"
