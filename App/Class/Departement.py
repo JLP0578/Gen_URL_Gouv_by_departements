@@ -1,10 +1,14 @@
-class NomDepartement:
+class Departement:
     def __init__(self, nom, code):
         self.nom = nom
         self.code = code
 
-    def methode(self):
-        print("Ceci est une méthode de la classe.")
+    def outObjet(self):
+        return {
+            "nom": self.nom,
+            "code": self.code
+        }
+
 
 
 
