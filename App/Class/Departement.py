@@ -8,19 +8,3 @@ class Departement:
             "nom": self.nom,
             "code": self.code
         }
-
-
-
-
-
-
-
-# # Création d'une instance de la classe
-# objet = NomDepartement("Valeur1", "Valeur2")
-
-# # Utilisation des attributs de l'objet
-# print(objet.attribut1)
-# print(objet.attribut2)
-
-# # Appel d'une méthode de l'objet
-# objet.methode()
