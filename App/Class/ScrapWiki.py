@@ -34,15 +34,16 @@ class ScrapWiki:
             print("La div parente avec la classe spécifique n'a pas été trouvée sur la page.")
             
     def getUL(self, parent_div):
-        ul_list = parent_div.find('ul')
+        ul_list = parent_div.find_all('ul')
         if ul_list:
-            self.getLIs(ul_list)
+            for ul in ul_list:
+                self.getLIs(ul)
             return ul_list
         else:
             print("La liste <ul> n'a pas été trouvée à l'intérieur de la div parente.")
 
-    def getLIs(self, ul_list):
-        li_elements = ul_list.find_all('li')
+    def getLIs(self, ul):
+        li_elements = ul.find_all('li')
         if li_elements:
             for li in li_elements:
                 tab = self.DepartementScraped
@@ -54,7 +55,8 @@ class ScrapWiki:
 
     def getNomAndCode(self, li):
         code_element = li.find('code')
-        a_element = li.find('a')
+        a_element = li.find_all('a')
+        a_element = a_element[-1]
         if code_element and a_element:
             a_text = a_element.get_text()
             code_text = code_element.get_text()
