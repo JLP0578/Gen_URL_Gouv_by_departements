@@ -1,3 +1,0 @@
-python -m pytest
-
-PAUSE
