@@ -9,9 +9,25 @@ from App.Class.DepartementURL import DepartementURL
 
 def test_DepartementURL():
     DEPARTEMENT = {"nom": "Ain","code": "01"}
-    URL = "https://xxx.xx/"
-    OUTPUT = {"nom": "Ain","code": "01", "URLs": {"domaine": URL, "E.RNT": URL}}
+    DOMAINE_OBJ = {"URL": "https://xxx.xx/", "verified": False}
+    ERNT_OBJ = {"URL": "https://xxx.xx/xxx/xxx", "verified": False}
+    OUTPUT = {
+        "nom": "Ain",
+        "code": "01", 
+        "URLs": {
+            "domaine": DOMAINE_OBJ,
+            "E.RNT": ERNT_OBJ
+        }
+    }
 
 
-    OBJECT = DepartementURL(DEPARTEMENT, URL)
+    OBJECT = DepartementURL(DEPARTEMENT, DOMAINE_OBJ, ERNT_OBJ)
+    # test output
     assert DepartementURL.outObjet(OBJECT) == OUTPUT
+    # test propriete 
+    assert OBJECT.nom == DEPARTEMENT["nom"]
+    assert OBJECT.code == DEPARTEMENT["code"]
+    assert OBJECT.domaine == DOMAINE_OBJ["URL"]
+    assert OBJECT.domaineVerif == DOMAINE_OBJ["verified"]
+    assert OBJECT.ERNT == ERNT_OBJ["URL"]
+    assert OBJECT.ERNTVerif == ERNT_OBJ["verified"]
