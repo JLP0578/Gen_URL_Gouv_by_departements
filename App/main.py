@@ -28,6 +28,9 @@ def START_SCRAP_WIKI():
 def START_AUTO_GEN_URL():
     print("--- START_AUTO_GEN_URL ---")
     print("- START")
+    # LIMITATION /!\
+    # MAX 5 SELECTION EN SIMULTANE
+    # RISQUE D'ISOLATION TEMPORAIRE DU CLIENT PAR LE PROXI DU SERVEUR
     tabCodes = ["04", "05", "06", "13", "84"]
     agu = AutoGenURL(tabCodes)
 
