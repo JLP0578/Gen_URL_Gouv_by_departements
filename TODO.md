@@ -35,6 +35,9 @@ OUTPUTS :
 ## [0] Récupération des url des E.RNT
 
 - [0] Complétion et vérification de la page
+> https://www.xxxx.gouv.fr/Actions-de-l-Etat/Risques-naturels-et-technologiques
+> https://www.indre-et-loire.gouv.fr/Actions-de-l-Etat/Risques-naturels-et-technologiques
+- [0] Vérification de la page avec request
 
 si mauvais :
 - [0] Recherche avec google advence search
